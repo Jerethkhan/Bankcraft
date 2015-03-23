@@ -36,23 +36,23 @@ public class ExperienceBukkitHandler {
 		
 		//calculate experience from levels see http://www.minecraftwiki.net/wiki/Experience
 		if (currentLevel <= 15) {
-			experienceFromLevels = currentLevel*17;
+			experienceFromLevels = (2*currentLevel)+7;
 		} else
 		if (currentLevel <= 30) {
-			experienceFromLevels = (int)((1.5*currentLevel*currentLevel)-(29.5*currentLevel)+360);
+			experienceFromLevels = (5*currentLevel)-38;
 		} else {
-			experienceFromLevels = (int)((3.5*currentLevel*currentLevel)-(151.5*currentLevel)+2220);
+			experienceFromLevels = (9*currentLevel)-158;
 		}
 			
 		
 		//calculate experience needed to level up
 		if (currentLevel <= 14) {
-			experienceNeededFromCurrentLevelToNext = 17;
+			experienceNeededFromCurrentLevelToNext = (currentLevel*currentLevel)+(6*currentLevel);
 		} else
 		if (currentLevel <= 29) {
-			experienceNeededFromCurrentLevelToNext = (int)((3*currentLevel)-28);
+			experienceNeededFromCurrentLevelToNext = (2.5*(currentLevel*currentLevel))-((40.5*currentLevel)+360);
 		} else {
-			experienceNeededFromCurrentLevelToNext = (int)((7*currentLevel)-148);
+			experienceNeededFromCurrentLevelToNext = (4.5*(currentLevel*currentLevel))-((162.5*currentLevel)+2220);
 		}
 			
 		//calculate total xp	
